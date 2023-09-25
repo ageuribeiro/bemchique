@@ -1,0 +1,23 @@
+{% extends 'sistemas/base.html' %}
+{% block body %}
+
+<form class="formAcesso" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+    <h1> Acesso Restrito </h1>
+    <div class="form-group">
+        <label for="systemEmail">Email</label>
+        <input type="email" name="systemEmail" id="systemEmail" required autofocus>
+    </div>
+    <div class="form-group">
+        <label for="systemPass">Senha</label>
+        <input type="password" name="systemPass" id="systemPass" required>
+    </div>
+    <div class="form-group-btn">
+        <button class="btn">Entrar</button>
+        <button class="btn">Cadastrar</button>
+    </div>
+    <div class="helping">
+        <p> Se você esqueceu a senha <a href="{{url_for('remember')}}">clique aqui <i class='bx bxs-hand-up' ></i></a></p>
+        <p> Retorne para a <a href="{{url_for('home')}}">loja <i class='bx bx-reset' ></i></a></p>
+    </div>
+</form>
+{% endblock %}
